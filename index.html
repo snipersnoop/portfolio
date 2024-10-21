@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pesonal Portfolio Website | Richard Adu</title>
+    <link rel="stylesheet" href="stylee.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">Richard.</a>
+      <nav class="navbar">
+        <a href="#" class="active" onclick="scrollToSection('home')">Home</a>
+        <a href="#about" class="active" onclick="scrollToSection('about')">About</a>
+        <a href="#experience" class="active">Experience</a>
+        <a href="https://bit.ly/4dlFx1g" class="active"  target="_blank">Projects</a>
+        <a href="#contact" class="active">Contact</a>
+      </nav>
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-content">
+        <h1>Hi, I'm Richard Adu.</h1>
+        <h3>Frontend Developer | Soc Analyst.</h3>
+        <p>
+          a passionate Front-End Developer and SOC Analyst with a unique blend
+          of skills in web development and cybersecurity. I thrive on creating
+          visually appealing and user-friendly interfaces while ensuring robust
+          security practices.
+        </p>
+        <div class="btn-box">
+          <a href="#contact">Hire Me</a>
+          <a href="https://drive.google.com/uc?export=download&id=1vUUWIyKErFUg-tDMjFsGwlrGWdhaAd1l">Download CV</a>
+        </div>
+      </div>
+      <div class="home-sci">
+        <a href="https://www.linkedin.com/in/richard-asare-bediako-adu-a429401a7" target="_blank"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/snipersnoop" target="_blank"><i class="bx bxl-github"></i></a>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <div class="about-content">
+        <h1>About Me.</h1>
+        <h3>Frontend Developer | Soc Analyst.</h3>
+        <p>
+            I am a cybersecurity professional based in Accra, Ghana, with a robust educational background and a commitment to excellence in technology. 
+            I hold a Diploma and a Bachelor of Science in Information Technology Management from the <a href="https://upsa.edu.gh/" class="unive"  target="blank">University of Professional Studies, Accra.</a>
+            I am CompTIA Security+ (Sec+) certified and also hold the (ISC)² Certified in Cybersecurity (CC) certification. 
+            My education has provided me with a comprehensive understanding of IT management principles,
+             cybersecurity protocols, and the latest technologies shaping the industry.            
+            As a front-end developer and SOC analyst, I combine my technical expertise with a strong understanding of 
+            cybersecurity to create secure and engaging web applications. I am dedicated to continuous learning and staying updated on the latest 
+            trends and best practices in both cybersecurity and web development.
+            I am eager to leverage my skills and knowledge to contribute to innovative projects and collaborate with like-minded professionals.
+        </p>
+        
+        
+        </div>
+      </div>
+    </section>
+    <section class="experience" id="experience">
+      <div class="experience-content">
+        <h1>Experience.</h1>
+        <h3>National Petroleum Authority <br>| IT Support</h3>
+        <li><b>Vulnerability Management:</b> Conducted Nessus scans to identify and remediate vulnerabilities
+            across the organization’s network, reducing potential security risks by 25%.</li>
+        
+        <li><b>Endpoint Security:</b> Led the deployment and management of antivirus software on over 500
+            endpoints, ensuring protection against malware and other threats.</li>
+        
+        <li><b>Active Directory Administration:</b> Managed Active Directory, including user account creation,
+            group policies, and access controls, enhancing security and compliance.</li>
+        
+        <h3>Zentech I.T Solutions Limited <br>| Network Administrator</h3>
+        <li><b>Network Design:</b>Designed and implemented secure and scalable network infrastructures for small to medium-sized enterprises
+        <li><b>Configuration & Management:</b>Configured routers, switches, and firewalls, optimizing network
+            performance and ensuring secure data transmission.
+        <li><b>Network Security:</b> Implemented VLANs, access control lists (ACLs), and VPNs to secure network
+            traffic and protect sensitive data.</li>
+        <h3>Greater Accra Regional Hospital <br>| IT Support</h3>
+        <li><b>Technical Support:</b>Provided comprehensive IT support for over 100 end-users, resolving
+            hardware, software, and network issues promptly.</li>
+        <li><b>System Maintenance:</b> Managed the installation, configuration, and troubleshooting of desktop
+            systems, printers, and peripheral devices.</li>
+        <li><b>Incident Response:</b>Diagnosed and resolved technical issues, reducing downtime and improving
+            user productivity by 20%.</li>
+        
+        </div>
+      
+      </div>
+    </section>
+    <footer class="footer" id="contact">
+      <div class="footer-content">
+          <h3>Richard Asare Bediako Adu</h3>
+          <p>Cybersecurity Professional & Front-end Developer | Accra, Ghana</p>
+          
+          <div class="footer-sci">
+              <a href="https://www.linkedin.com/in/richard-asare-bediako-adu-a429401a7" target="_blank"><i class="bx bxl-linkedin"></i></a>
+              <a href="https://github.com/snipersnoop" target="_blank"><i class="bx bxl-github"></i></a>
+              <a href="mailto:richardadu1980@gmail.com" target="_blank"><i class="bx bx-envelope"></i></a>
+              <a href="mailto:richardadu1980@gmail.com" target="_blank"><i class="bx bx-envelope"></i></a>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <p>&copy; 2024 Richard Asare Bediako Adu. All rights reserved.</p>
+      </div>
+  </footer>
+  
+
+  </body>
+  <script>
+    window.addEventListener('scroll', function() {
+        var header = document.querySelector('.header');
+        if (window.scrollY > 50) { // Adjust this value to control when the background color should change
+            header.style.background = '#081b29'; // Solid background after scroll
+        } else {
+            header.style.background = 'transparent'; // Transparent background at the top
+        }
+    });
+</script>
+<script>
+  // Get all navbar links
+  const navbarLinks = document.querySelectorAll('.navbar a');
+
+  // Loop through each link and add an event listener
+  navbarLinks.forEach(link => {
+      link.addEventListener('click', function() {
+          // Remove 'active' class from all links
+          navbarLinks.forEach(link => link.classList.remove('active'));
+          
+          // Add 'active' class to the clicked link
+          this.classList.add('active');
+      });
+  });
+</script>
+<script>
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+  
+</script>
+
+
+
+
+
+</html>
